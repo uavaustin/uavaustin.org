@@ -10,7 +10,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="mobile-web-app-capable" content="yes">
     <title>
-        UAV Austin Programming Camp - HackMD
+        Python - Day 2 - HackMD
     </title>
     <link rel="icon" type="image/png" href="https://hackmd.io/favicon.png">
     <link rel="apple-touch-icon" href="https://hackmd.io/apple-touch-icon.png">
@@ -35,121 +35,46 @@
 </head>
 
 <body>
-    <div id="doc" class="markdown-body container-fluid"><h1 id="uav-austin-programming-camp-fall-2017" style=""><a class="anchor hidden-xs" href="#uav-austin-programming-camp-fall-2017" title="uav-austin-programming-camp-fall-2017"><span class="octicon octicon-link"></span></a><center><big>UAV Austin Programming Camp</big><br>
-<small><i>Fall 2017</i></small></center></h1><h2 id="intro" style=""><a class="anchor hidden-xs" href="#intro" title="intro"><span class="octicon octicon-link"></span></a>Intro</h2><p>Hey there.</p><p>To get everyone up and running for this semester, we have our 3 week long programming camp to get us started.</p><p>We’ll be doing the <em>Python</em>, <em>Rust</em>, and <em>Node.js</em> programming languages.</p><p>Here’s a quick overview of where and why these languages are used:</p><table>
-<thead>
-<tr>
-<th>Language</th>
-<th>Teams</th>
-<th>What’s it good for?</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Python</td>
-<td>- Image Recognition</td>
-<td>- Fast prototyping / scripting<br>- Fairly easy language to learn</td>
-</tr>
-<tr>
-<td>Rust</td>
-<td>- Integration<br>- Autopilot</td>
-<td>- Systems programming<br>- Very expressive for a lower-level language<br>- It’s not C++</td>
-</tr>
-<tr>
-<td>Node.js</td>
-<td>- Integration</td>
-<td>- Async programming<br>- Making web servers<br>- HTML / CSS / JS desktop applications<br>- Massive package index</td>
-</tr>
-</tbody>
-</table><p>We’re using <a href="https://hackmd.io" target="_blank">HackMD</a> to generate these pages, check it out if you’d like.</p><h2 id="schedule" style=""><a class="anchor hidden-xs" href="#schedule" title="schedule"><span class="octicon octicon-link"></span></a>Schedule</h2><p>You’ll notice two things here.</p><ol>
-<li>
-<p><em>The camp is pretty dense.</em><br>
-Yeah the time requirements are a little high here, we’re doing this all now before your exams start. We’re packing in as much as we can.</p>
+    <div id="doc" class="markdown-body container-fluid"><h1 id="python-day-2" style=""><a class="anchor hidden-xs" href="#python-day-2" title="python-day-2"><span class="octicon octicon-link"></span></a>Python - Day 2</h1><h2 id="basic-python-data-structures" style=""><a class="anchor hidden-xs" href="#basic-python-data-structures" title="basic-python-data-structures"><span class="octicon octicon-link"></span></a>Basic Python Data Structures</h2><p><a href="https://docs.python.org/3/tutorial/datastructures.html" target="_blank">Python Docs - Data Structures</a></p><p>This is not the easiest read in the world. Just remember the following however:</p><ul>
+<li>Lists are immutable<br>
+You make lists like so: <code>['hello', 'there', 3333]</code><br>
+Remember that they can be of mixed types, and you they are mutable (you can change them all you like)</li>
+<li>Tuples are like lists… but immutable (cannot be changed)<br>
+Similarly, you put them between parenthesis <code>('This', 'Cannot', 'Change')</code>
+<ul>
+<li>One thing to note:<br>
+While tuples are immutable, you still can modify the internals. if you had something like<pre><code class="python hljs">a = ([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>], <span class="hljs-string">'ugh'</span>)
+</code></pre>
+You could do <code>a[0].push(4)</code> to get<pre><code class="python hljs">([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>], <span class="hljs-string">'ugh'</span>)
+</code></pre>
 </li>
-<li>
-<p><em>Why the hell are we switching rooms so often?</em><br>
-Well uh… I guess that’s how the room reservation registrar thought it would work best.</p>
+</ul>
 </li>
-</ol><p>Listed first is <em>Day 0</em>. We have here what’s needed to be installed to get going with the camp. We’d suggest you look over this before the first day, so we don’t have to spend too much time there.</p><table>
-<thead>
-<tr>
-<th>Date</th>
-<th>Time</th>
-<th>Room</th>
-<th>Links</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td><a href="http://uavaustin.org/camp/rust/0" target="_blank">Rust - Day 0</a><br><a href="http://uavaustin.org/camp/python/0" target="_blank">Python - Day 0</a><br><a href="http://uavaustin.org/camp/nodejs/0" target="_blank">Node.js - Day 0</a></td>
-</tr>
-<tr>
-<td>5 Sep 2017<br>(Tue)</td>
-<td>8:00 PM - 9:30 PM</td>
-<td>Rust - RLM 5.120<br>Python &amp; Node.js - RLM 5.122</td>
-<td>Rust - Day 1<br><a href="http://uavaustin.org/camp/python/1" target="_blank">Python - Day 1</a><br><a href="http://uavaustin.org/camp/nodejs/1" target="_blank">Node.js - Day 1</a></td>
-</tr>
-<tr>
-<td>7 Sep 2017<br>(Thu)</td>
-<td>8:00 PM - 9:30 PM</td>
-<td>Rust - RLM 5.114<br>Python &amp; Node.js - RLM 5.118</td>
-<td>Rust - Day 2<br><a href="http://uavaustin.org/camp/python/2" target="_blank">Python - Day 2</a><br><a href="http://uavaustin.org/camp/nodejs/2" target="_blank">Node.js - Day 2</a></td>
-</tr>
-<tr>
-<td>10 Sep 2017<br>(Sun)</td>
-<td>3:00 PM - 4:45 PM</td>
-<td>Rust - RLM 5.116<br>Python &amp; Node.js - RLM 5.118</td>
-<td>Rust - Day 3<br>Python - Day 3<br><a href="http://uavaustin.org/camp/nodejs/3" target="_blank">Node.js - Day 3</a></td>
-</tr>
-<tr>
-<td>12 Sep 2017<br>(Tue)</td>
-<td>8:00 PM - 9:30 PM</td>
-<td>Rust - RLM 7.114<br>Python &amp; Node.js - RLM 7.124</td>
-<td>Rust - Day 4<br>Python - Day 4<br>Node.js - Day 4</td>
-</tr>
-<tr>
-<td>14 Sep 2017<br>(Thu)</td>
-<td>8:00 PM - 9:30 PM</td>
-<td>Rust - RLM 5.114<br>Python &amp; Node.js - RLM 5.118</td>
-<td>Rust - Day 5<br>Python - Day 5<br>Node.js - Day 5</td>
-</tr>
-<tr>
-<td>17 Sep 2017<br>(Sun)</td>
-<td>3:00 PM - 4:45 PM</td>
-<td>Rust - RLM 5.116<br>Python &amp; Node.js - RLM 5.118</td>
-<td>Rust - Day 6<br>Python - Day 6<br>Node.js - Day 6</td>
-</tr>
-<tr>
-<td>19 Sep 2017<br>(Tue)</td>
-<td>8:00 PM - 9:30 PM</td>
-<td>Rust - RLM 5.120<br>Python &amp; Node.js - RLM 5.122</td>
-<td>Rust - Day 7<br>Python - Day 7<br>Node.js - Day 7</td>
-</tr>
-<tr>
-<td>21 Sep 2017<br>(Thu)</td>
-<td>8:00 PM - 9:30 PM</td>
-<td>Rust - TBD<br>Python &amp; Node.js - TBD</td>
-<td>Rust - Day 8<br>Python - Day 8<br>Node.js - Day 8</td>
-</tr>
-</tbody>
-</table><h2 id="have-programming-questions" style=""><a class="anchor hidden-xs" href="#have-programming-questions" title="have-programming-questions"><span class="octicon octicon-link"></span></a>Have programming questions?</h2><p>Go to the #python, #rust, or #nodejs channel on <a href="http://uavaustin.slack.com" target="_blank">Slack</a> and ask away.</p></div>
+<li>Python dictionaries are pretty important.<br>
+They’re essentially just key:value pairs. (In the Java world they’re the Maps.)<br>
+You simply just defined them with curly braces like so<pre><code class="python hljs">hmm = { 
+    <span class="hljs-string">'what'</span>: <span class="hljs-string">'idk'</span>,
+    <span class="hljs-string">'top'</span>: <span class="hljs-string">'kek'</span>,
+    <span class="hljs-string">'universe'</span>: <span class="hljs-number">42</span>
+}
+</code></pre>
+Just like with lists and tuples, you can mix types.</li>
+</ul><h2 id="practice" style=""><a class="anchor hidden-xs" href="#practice" title="practice"><span class="octicon octicon-link"></span></a>Practice</h2><p>Before moving on to more topics, we’ll stop and just do some easy Python examples</p><p>HackerRank has a good section on basic Python data types we can practice with. Make an account (if you don’t have one) and go these links to practice with Python data types:</p><ul>
+<li><a href="https://www.hackerrank.com/domains/python/py-introduction" target="_blank">HackerRank - Introduction</a></li>
+<li><a href="https://www.hackerrank.com/domains/python/py-basic-data-types" target="_blank">HackerRank - Basic Data Types</a></li>
+</ul></div>
     <div class="ui-toc dropup unselectable hidden-print" style="display:none;">
         <div class="pull-right dropdown">
             <a id="tocLabel" class="ui-toc-label btn btn-default" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" title="Table of content">
                 <i class="fa fa-bars"></i>
             </a>
             <ul id="ui-toc" class="ui-toc-dropdown dropdown-menu" aria-labelledby="tocLabel">
-                <div class="toc"><ul class="nav"><li class=""><a href="#uav-austin-programming-camp-fall-2017">UAV Austin Programming Camp
-Fall 2017</a><ul class="nav"><li><a href="#intro">Intro</a></li><li class=""><a href="#schedule">Schedule</a></li><li><a href="#have-programming-questions">Have programming questions?</a></li></ul></li></ul></div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+                <div class="toc"><ul class="nav"><li class=""><a href="#python-day-2">Python - Day 2</a><ul class="nav"><li class=""><a href="#basic-python-data-structures">Basic Python Data Structures</a></li><li><a href="#practice">Practice</a></li></ul></li></ul></div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
             </ul>
         </div>
     </div>
     <div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print" data-spy="affix" style="top:17px;display:none;"  >
-        <div class="toc"><ul class="nav"><li class=""><a href="#uav-austin-programming-camp-fall-2017">UAV Austin Programming Camp
-Fall 2017</a><ul class="nav"><li><a href="#intro">Intro</a></li><li class=""><a href="#schedule">Schedule</a></li><li><a href="#have-programming-questions">Have programming questions?</a></li></ul></li></ul></div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+        <div class="toc"><ul class="nav"><li class=""><a href="#python-day-2">Python - Day 2</a><ul class="nav"><li class=""><a href="#basic-python-data-structures">Basic Python Data Structures</a></li><li><a href="#practice">Practice</a></li></ul></li></ul></div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous" defer></script>
