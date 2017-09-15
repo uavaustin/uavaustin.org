@@ -10,7 +10,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="mobile-web-app-capable" content="yes">
     <title>
-        UAV Austin Programming Camp - HackMD
+        Rust - Day 5 - HackMD
     </title>
     <link rel="icon" type="image/png" href="https://hackmd.io/favicon.png">
     <link rel="apple-touch-icon" href="https://hackmd.io/apple-touch-icon.png">
@@ -35,121 +35,29 @@
 </head>
 
 <body>
-    <div id="doc" class="markdown-body container-fluid"><h1 id="uav-austin-programming-camp-fall-2017"><a class="anchor hidden-xs" href="#uav-austin-programming-camp-fall-2017" title="uav-austin-programming-camp-fall-2017"><span class="octicon octicon-link"></span></a><center><big>UAV Austin Programming Camp</big><br>
-<small><i>Fall 2017</i></small></center></h1><h2 id="intro"><a class="anchor hidden-xs" href="#intro" title="intro"><span class="octicon octicon-link"></span></a>Intro</h2><p>Hey there.</p><p>To get everyone up and running for this semester, we have our 3 week long programming camp to get us started.</p><p>We’ll be doing the <em>Python</em>, <em>Rust</em>, and <em>Node.js</em> programming languages.</p><p>Here’s a quick overview of where and why these languages are used:</p><table>
-<thead>
-<tr>
-<th>Language</th>
-<th>Teams</th>
-<th>What’s it good for?</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Python</td>
-<td>- Image Recognition</td>
-<td>- Fast prototyping / scripting<br>- Fairly easy language to learn</td>
-</tr>
-<tr>
-<td>Rust</td>
-<td>- Integration<br>- Autopilot</td>
-<td>- Systems programming<br>- Very expressive for a lower-level language<br>- It’s not C++</td>
-</tr>
-<tr>
-<td>Node.js</td>
-<td>- Integration</td>
-<td>- Async programming<br>- Making web servers<br>- HTML / CSS / JS desktop applications<br>- Massive package index</td>
-</tr>
-</tbody>
-</table><p>We’re using <a href="https://hackmd.io" target="_blank">HackMD</a> to generate these pages, check it out if you’d like.</p><h2 id="schedule"><a class="anchor hidden-xs" href="#schedule" title="schedule"><span class="octicon octicon-link"></span></a>Schedule</h2><p>You’ll notice two things here.</p><ol>
-<li>
-<p><em>The camp is pretty dense.</em><br>
-Yeah the time requirements are a little high here, we’re doing this all now before your exams start. We’re packing in as much as we can.</p>
+    <div id="doc" class="markdown-body container-fluid"><h1 id="rust-day-5"><a class="anchor hidden-xs" href="#rust-day-5" title="rust-day-5"><span class="octicon octicon-link"></span></a>Rust - Day 5</h1><div class="alert alert-danger">
+<p>If you’re just joining the camps now, let us know and we’ll get you up to speed.</p>
+</div><h2 id="today’s-sections"><a class="anchor hidden-xs" href="#today’s-sections" title="today’s-sections"><span class="octicon octicon-link"></span></a>Today’s Sections</h2><ul>
+<li><a href="https://doc.rust-lang.org/book/second-edition/ch11-00-testing.html" target="_blank">Chapter 11</a> from the <a href="https://doc.rust-lang.org" target="_blank">Rust Book</a></li>
+<li><a href="https://doc.rust-lang.org/book/second-edition/ch15-00-smart-pointers.html" target="_blank">Chapter 15</a> from the <a href="https://doc.rust-lang.org" target="_blank">Rust Book</a></li>
+<li><a href="https://rustbyexample.com/fn.html" target="_blank">Chapter 8</a> of <a href="https://rustbyexample.com/" target="_blank">Rust by Example</a>
+<ul>
+<li>(we’re making Rust by Example exercises optional, but if you have the time, you should try to do them!)</li>
+</ul>
 </li>
-<li>
-<p><em>Why the hell are we switching rooms so often?</em><br>
-Well uh… I guess that’s how the room reservation registrar thought it would work best.</p>
-</li>
-</ol><p>Listed first is <em>Day 0</em>. We have here what’s needed to be installed to get going with the camp. We’d suggest you look over this before the first day, so we don’t have to spend too much time there.</p><table>
-<thead>
-<tr>
-<th>Date</th>
-<th>Time</th>
-<th>Room</th>
-<th>Links</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td><a href="http://uavaustin.org/camp/rust/0" target="_blank">Rust - Day 0</a><br><a href="http://uavaustin.org/camp/python/0" target="_blank">Python - Day 0</a><br><a href="http://uavaustin.org/camp/nodejs/0" target="_blank">Node.js - Day 0</a></td>
-</tr>
-<tr>
-<td>5 Sep 2017<br>(Tue)</td>
-<td>8:00 PM - 9:30 PM</td>
-<td>Rust - RLM 5.120<br>Python &amp; Node.js - RLM 5.122</td>
-<td><a href="http://uavaustin.org/camp/rust/1" target="_blank">Rust - Day 1</a><br><a href="http://uavaustin.org/camp/python/1" target="_blank">Python - Day 1</a><br><a href="http://uavaustin.org/camp/nodejs/1" target="_blank">Node.js - Day 1</a></td>
-</tr>
-<tr>
-<td>7 Sep 2017<br>(Thu)</td>
-<td>8:00 PM - 9:30 PM</td>
-<td>Rust - RLM 5.114<br>Python &amp; Node.js - RLM 5.118</td>
-<td><a href="http://uavaustin.org/camp/rust/2" target="_blank">Rust - Day 2</a><br><a href="http://uavaustin.org/camp/python/2" target="_blank">Python - Day 2</a><br><a href="http://uavaustin.org/camp/nodejs/2" target="_blank">Node.js - Day 2</a></td>
-</tr>
-<tr>
-<td>10 Sep 2017<br>(Sun)</td>
-<td>3:00 PM - 4:45 PM</td>
-<td>Rust - RLM 5.116<br>Python &amp; Node.js - RLM 5.118</td>
-<td><a href="http://uavaustin.org/camp/rust/3" target="_blank">Rust - Day 3</a><br>Python - Day 3<br><a href="http://uavaustin.org/camp/nodejs/3" target="_blank">Node.js - Day 3</a></td>
-</tr>
-<tr>
-<td>12 Sep 2017<br>(Tue)</td>
-<td>8:00 PM - 9:30 PM</td>
-<td>Rust - RLM 5.114<br>Python &amp; Node.js - RLM 5.118</td>
-<td><a href="http://uavaustin.org/camp/rust/4" target="_blank">Rust - Day 4</a><br>Python - Day 4<br>Node.js - Day 4</td>
-</tr>
-<tr>
-<td>14 Sep 2017<br>(Thu)</td>
-<td>8:00 PM - 9:30 PM</td>
-<td>Rust - RLM 5.114<br>Python &amp; Node.js - RLM 5.118</td>
-<td><a href="http://uavaustin.org/camp/rust/4" target="_blank">Rust - Day 5</a><br>Python - Day 5<br>Node.js - Day 5</td>
-</tr>
-<tr>
-<td>17 Sep 2017<br>(Sun)</td>
-<td>3:00 PM - 4:45 PM</td>
-<td>Rust - RLM 5.116<br>Python &amp; Node.js - RLM 5.118</td>
-<td>Rust - Day 6<br>Python - Day 6<br>Node.js - Day 6</td>
-</tr>
-<tr>
-<td>19 Sep 2017<br>(Tue)</td>
-<td>8:00 PM - 9:30 PM</td>
-<td>Rust - RLM 5.120<br>Python &amp; Node.js - RLM 5.122</td>
-<td>Rust - Day 7<br>Python - Day 7<br>Node.js - Day 7</td>
-</tr>
-<tr>
-<td>21 Sep 2017<br>(Thu)</td>
-<td>8:00 PM - 9:30 PM</td>
-<td>Rust - TBD<br>Python &amp; Node.js - TBD</td>
-<td>Rust - Day 8<br>Python - Day 8<br>Node.js - Day 8</td>
-</tr>
-</tbody>
-</table><h2 id="have-programming-questions"><a class="anchor hidden-xs" href="#have-programming-questions" title="have-programming-questions"><span class="octicon octicon-link"></span></a>Have programming questions?</h2><p>Go to the #python, #rust, or #nodejs channel on <a href="http://uavaustin.slack.com" target="_blank">Slack</a> and ask away.</p></div>
+</ul><p>Let us know if you have questions and happy programming!</p></div>
     <div class="ui-toc dropup unselectable hidden-print" style="display:none;">
         <div class="pull-right dropdown">
             <a id="tocLabel" class="ui-toc-label btn btn-default" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" title="Table of content">
                 <i class="fa fa-bars"></i>
             </a>
             <ul id="ui-toc" class="ui-toc-dropdown dropdown-menu" aria-labelledby="tocLabel">
-                <div class="toc"><ul class="nav"><li class=""><a href="#uav-austin-programming-camp-fall-2017">UAV Austin Programming Camp
-Fall 2017</a><ul class="nav"><li><a href="#intro">Intro</a></li><li class=""><a href="#schedule">Schedule</a></li><li><a href="#have-programming-questions">Have programming questions?</a></li></ul></li></ul></div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+                <div class="toc"><ul class="nav"><li class=""><a href="#rust-day-5">Rust - Day 5</a><ul class="nav"><li><a href="#today’s-sections">Today’s Sections</a></li></ul></li></ul></div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
             </ul>
         </div>
     </div>
     <div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print" data-spy="affix" style="top:17px;display:none;"  >
-        <div class="toc"><ul class="nav"><li class=""><a href="#uav-austin-programming-camp-fall-2017">UAV Austin Programming Camp
-Fall 2017</a><ul class="nav"><li><a href="#intro">Intro</a></li><li class=""><a href="#schedule">Schedule</a></li><li><a href="#have-programming-questions">Have programming questions?</a></li></ul></li></ul></div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+        <div class="toc"><ul class="nav"><li class=""><a href="#rust-day-5">Rust - Day 5</a><ul class="nav"><li><a href="#today’s-sections">Today’s Sections</a></li></ul></li></ul></div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous" defer></script>
