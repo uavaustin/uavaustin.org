@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<!--
+Originally from "Single Page Apps from Github Pages"
+https://github.com/rafrex/spa-github-pages under MIT license
+
+Adapted for UAV Austin use.
+
+This will capture the GitHub repo name will running in Travis so that
+redirects work for the CNAME and the <username>.github.io/<repo> url.
+-->
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>UAV Austin - 404</title>
+    <script type="text/javascript">
+      var segmentCount = 1;
+      var l = window.location;
+
+      <% if ENV['CNAME'] %>
+      <%= 'if (l.hostname === "' + ENV['CNAME'] + '")  segmentCount = 0;' %>
+      <% end %>
+
+      if (l.protocol !== 'file:') {
+        l.replace(
+          l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+          l.pathname.split('/').slice(0, 1 + segmentCount).join('/') + '/?p=/' +
+          l.pathname.slice(1).split('/').slice(segmentCount).join('/').replace(/&/g, '~and~') +
+          (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+          l.hash
+        );
+      }
+    </script>
+  </head>
+  <body>
+    404 - Page not found :(
+  </body>
+</html>
