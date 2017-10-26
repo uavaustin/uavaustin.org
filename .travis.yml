@@ -1,0 +1,25 @@
+language: node_js
+node_js:
+    - '8'
+sudo: false
+install:
+    - npm install
+script:
+    - npm run build
+    - ./ci/generate-404.sh
+before_deploy:
+    - shopt -s extglob
+    - GLOBIGNORE='.git'
+    - rm -rf !(.nojekyll|CNAME|LICENSE|README.md|build)
+    - cp -r build/* .
+    - rm -rf build
+deploy:
+    provider: pages
+    skip_cleanup: true
+    github_token: "$GITHUB_TOKEN"
+    on:
+        branch: master
+notifications:
+    email: false
+    slack:
+        secure: quWLGg6gqCkr/x/IrDV4/jvLfuR558JnztFg+9nnMtPtDqdevuHRlZsTpo8A5DF3vUdQR42A/gvtFyutUVS2RviGyU0PNzBqwmBuq6yuTJGAdHKCXz5Q1z88oXJCdwT3ik0cjGniCqg4GGtEKjIUXbgO7hIk9nxkq3r3R/ruhVU0htx+0PDmygfm/BQAUMAnfiM6MEAePHaH3IVidsaYt50DwK3rS45dqFZXMAOYYrd23QpqQCqFAhbYaQIS5C0tF7YwbiQG9q7rIxLVIhfyW0frZoAbhcOKzmk1/g9PttpSVOQZkq2AiqQKE/RxbFb73LgiVUW4ETjNlodiBbDDR/saszQojRjFEHQDaSnfPYygaLt3J14+YNg/vueUrh4GtxPVnZ7x9dUHNKDZVg4AeBO2vfPgpTvtZ/AjsY77EcsFcc7sr+mzJcLjPkgJnduMNDr5AcM51FM3SDFMQxAAPJGwmy2jwBjlz/Hp/baNgvxi1mGK+97JgR+eJZ0cjaBkOZHpWG9e3doiD1lBze/U+AtM+FJVRzi0P7RHUC9CgEEEQAslIPXk10ATpWhSsvU4XkTKwx48CG/Y2l2KbQUSzltqbJq18uaXb3b3p88JH5+tGNj/OMcqdVmjnGnES0G+zyvF3kFb9t8KMat88hm58iw91XTyOHlM8/BPiDASKkU=
