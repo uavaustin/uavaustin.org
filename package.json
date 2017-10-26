@@ -4,7 +4,7 @@
     "private": true,
     "description": "UAV Austin Website",
     "scripts": {
-        "start": "webpack-dev-server --devtool eval-source-map --open",
+        "start": "webpack-dev-server --open",
         "build": "webpack -p"
     },
     "repository": {
@@ -19,7 +19,6 @@
     "dependencies": {
         "react": "^16.0.0",
         "react-dom": "^16.0.0",
-        "react-interactive": "^0.8.1",
         "react-router-dom": "^4.2.2"
     },
     "devDependencies": {
@@ -28,7 +27,6 @@
         "babel-preset-env": "^1.6.1",
         "babel-preset-react": "^6.24.1",
         "copy-webpack-plugin": "^4.2.0",
-        "html-webpack-plugin": "^2.30.1",
         "webpack": "^3.8.1",
         "webpack-dev-server": "^2.9.3"
     }
