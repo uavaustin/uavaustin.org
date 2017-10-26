@@ -10,9 +10,9 @@
 BASEDIR=$(dirname "$0")
 
 TEMPLATE_PATH=$BASEDIR"/404.html.erb"
-BUILD_DIR=$(realpath $BASEDIR"/../build/")
+BUILD_DIR=$BASEDIR"/../build/"
 DESTINATION_PATH=$BUILD_DIR"/404.html"
-CNAME_PATH=$(realpath $BASEDIR"/../CNAME")
+CNAME_PATH=$BASEDIR"/../CNAME"
 
 mkdir -p $BUILD_DIR
 
