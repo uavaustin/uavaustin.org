@@ -1,0 +1,12 @@
+# Ignoring common Node.js stuff
+node_modules
+npm-debug.log*
+
+coverage/
+.nyc_output/
+
+# Ignore the output directory
+build/
+
+# Ignoring package-lock.json for now
+package-lock.json
