@@ -25,7 +25,7 @@ let extractSass = new ExtractTextPlugin({
 
 module.exports = {
     entry: [
-        path.join(__dirname, '/src/main.jsx'),
+        path.join(__dirname, '/src/scripts/main.jsx'),
         path.join(__dirname, '/src/styles/main.scss')
     ],
     output: {
