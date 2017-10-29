@@ -49,7 +49,7 @@ module.exports = {
             }
         ]
     },
-    devtool: prod ? 'undefined' : 'source-map',
+    devtool: prod ? undefined : 'source-map',
     devServer: {
         contentBase: path.join(__dirname, 'build'),
         historyApiFallback: true
