@@ -46,6 +46,14 @@ module.exports = {
                     'postcss-loader',
                     'sass-loader'
                 ])
+            },
+            {
+                test: /\.yml$/,
+                include: path.join(__dirname, '/src/scripts/data/'),
+                loader: [
+                    'json-loader',
+                    'yaml-loader'
+                ]
             }
         ]
     },
