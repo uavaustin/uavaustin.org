@@ -13,7 +13,7 @@ import PageNotFound from './pages/page-not-found.jsx';
 export default class App extends React.Component {
     render() {
         return (
-            <div>
+            <div className="app-main">
                 <Header />
                 <Switch>
                     <Route exact path="/" component={Home} />

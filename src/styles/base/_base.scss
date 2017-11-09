@@ -1,0 +1,22 @@
+// Using some sane defaults for the entirety of the page
+* {
+    box-sizing: border-box;
+    margin: 0;
+	padding: 0;
+}
+
+html {
+    height: 100vh;
+}
+
+// Putting all of the React app in a big flexbox column
+.app-main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    min-height: 100vh;
+
+    main {
+        flex: 1 0 auto;
+    }
+}

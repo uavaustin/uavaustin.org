@@ -1,0 +1,18 @@
+// Getting Google Fonts
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Exo+2:400');
+
+$open-sans: 'Open Sans', sans-serif;
+$exo-2: 'Exo 2', sans-serif;
+
+// Text should be Open Sans by default
+.app-main {
+    font-family: $open-sans;
+    font-weight: normal;
+    font-size: normal;
+}
+
+// Except that all the headers should use the Exo 2 font
+h1, h2, h3, h4, h5, h6 {
+    font-family: $exo-2;
+    font-weight: normal;
+}
