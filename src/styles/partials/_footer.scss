@@ -6,4 +6,12 @@ footer {
     color: #ffffff;
     text-align: center;
     font-size: small;
+
+    .social {
+        margin-bottom: 8px;
+
+        @include normal-size {
+            display: none;
+        }
+    }
 }

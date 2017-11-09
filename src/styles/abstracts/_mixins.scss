@@ -1,0 +1,14 @@
+// Setting where we'll go into the mobile version
+$small-threshold: '700px';
+
+@mixin small-size {
+    @media screen and (max-width: $small-threshold - 1) {
+        @content;
+    }
+}
+
+@mixin normal-size {
+    @media screen and (min-width: $small-threshold) {
+        @content;
+    }
+}

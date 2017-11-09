@@ -18,6 +18,9 @@
         "url": "https://github.com/uavaustin/uavaustin.org/issues"
     },
     "dependencies": {
+        "@fortawesome/fontawesome": "0.0.21",
+        "@fortawesome/fontawesome-free-brands": "0.0.18",
+        "@fortawesome/react-fontawesome": "0.0.12",
         "react": "^16.0.0",
         "react-dom": "^16.0.0",
         "react-router-dom": "^4.2.2"
