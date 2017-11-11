@@ -1,0 +1,16 @@
+.title-bar {
+    @include span-page;
+
+    display: block;
+    position:relative;
+    height: 75px;
+
+    background-color: $nord3;
+    color: #ffffff;
+
+    h1 {
+        position: absolute;
+        bottom: 10px;
+        font-size: 40px;
+    }
+}

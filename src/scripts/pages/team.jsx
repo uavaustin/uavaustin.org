@@ -1,9 +1,13 @@
 import React from 'react';
 
+import TitleBar from '../partials/title-bar.jsx';
+
 export default class Team extends React.Component {
     render() {
         return (
-            <div className='team'>team</div>
+            <div id='#team-page'>
+                <TitleBar>The Team</TitleBar>
+            </div>
         );
     }
 }
