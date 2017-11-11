@@ -16,6 +16,10 @@ let copy = new CopyWebpackPlugin([
     {
         from: path.join(__dirname, 'src/index.html'),
         to: path.join(__dirname, 'build/index.html')
+    },
+    {
+        from: path.join(__dirname, 'src/assets'),
+        to: path.join(__dirname, 'build/assets')
     }
 ]);
 
