@@ -6,9 +6,7 @@ export default class Footer extends React.Component {
     render() {
         return (
             <footer>
-                <div className='social'>
-                    <Social />
-                </div>
+                <Social />
                 <span>
                     &copy; 2017 Unmanned Aerial Vehicle Team | UT&nbsp;Austin
                 </span>

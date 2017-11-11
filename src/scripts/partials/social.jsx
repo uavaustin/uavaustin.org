@@ -7,9 +7,9 @@ import socialAccounts from '../data/social.yml';
 
 const SOCIAL_ICONS = {
     facebook: brands.faFacebook,
-    github: brands.faGithubAlt,
+    github: brands.faGithub,
     instagram: brands.faInstagram,
-    linkedIn: brands.faLinkedin,
+    linkedin: brands.faLinkedin,
     slack: brands.faSlack,
     twitter: brands.faTwitter
 };
@@ -30,8 +30,13 @@ export class SingleSocial extends React.Component {
 
 export default class Social extends React.Component {
     render() {
-        return socialAccounts.map((account) => {
-            return <SingleSocial type={account.type} link={account.url}/>
-        });
+        return (
+            <div className='social'>
+                {socialAccounts.map((account) => {
+                    return <SingleSocial key={account.type} type={account.type}
+                            link={account.url}/>
+                })}
+            </div>
+        );
     }
 }
