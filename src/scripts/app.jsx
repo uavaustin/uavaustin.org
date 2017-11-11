@@ -14,16 +14,18 @@ import PageNotFound from './pages/page-not-found.jsx';
 export default class App extends React.Component {
     render() {
         return (
-            <div className="app-main">
+            <div className='app-main'>
                 <Header />
-                <Switch>
-                    <Route exact path="/" component={Home}/>
-                    <Route path="/about" component={About}/>
-                    <Route path="/team" component={Team}/>
-                    <Route path="/fleet" component={Fleet}/>
-                    <Route path="/contact" component={Contact}/>
-                    <Route component={PageNotFound}/>
-                </Switch>
+                <main>
+                    <Switch>
+                        <Route exact path='/' component={Home}/>
+                        <Route path='/about' component={About}/>
+                        <Route path='/team' component={Team}/>
+                        <Route path='/fleet' component={Fleet}/>
+                        <Route path='/contact' component={Contact}/>
+                        <Route component={PageNotFound}/>
+                    </Switch>
+                </main>
                 <Footer />
             </div>
         );

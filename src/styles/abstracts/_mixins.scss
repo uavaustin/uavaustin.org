@@ -1,5 +1,16 @@
+// Elements that span the width should have a some padding in them
+@mixin span-page {
+    padding-left: 6%;
+    padding-right: 6%;
+
+    @include small-size {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
 // Setting where we'll go into the mobile version
-$small-threshold: '700px';
+$small-threshold: 600px;
 
 @mixin small-size {
     @media screen and (max-width: $small-threshold - 1) {
