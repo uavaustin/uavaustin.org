@@ -24,9 +24,7 @@ header {
     .social {
         float: right;
 
-        @include small-size {
-            display: none;
-        }
+        @include hide-small;
     }
 
     .menu-item {
@@ -53,9 +51,7 @@ header {
 
         height: 100%;
 
-        @include small-size {
-            display: none;
-        }
+        @include hide-small;
 
         .menu-item {
             display: inline-block;
@@ -71,9 +67,8 @@ header {
 
         float: right;
 
-        @include normal-size {
-            display: none;
-        }
+        @include hide-medium;
+        @include hide-large;
     }
 
     .wide-logo, .social, .hamburger-menu {

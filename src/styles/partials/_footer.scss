@@ -10,8 +10,7 @@ footer {
     .social {
         margin-bottom: 8px;
 
-        @include normal-size {
-            display: none;
-        }
+        @include hide-medium;
+        @include hide-large;
     }
 }

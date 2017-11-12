@@ -9,17 +9,39 @@
     }
 }
 
-// Setting where we'll go into the mobile version
-$small-threshold: 600px;
-
 @mixin small-size {
-    @media screen and (max-width: $small-threshold - 1) {
+    @media screen and (max-width: $small-threshold) {
         @content;
     }
 }
 
-@mixin normal-size {
-    @media screen and (min-width: $small-threshold) {
+@mixin medium-size {
+    @media screen and (min-width: $small-threshold + 1) 
+            and (max-width: $medium-threshold) {
         @content;
+    }
+}
+
+@mixin large-size {
+    @media screen and (min-width: $medium-threshold + 1) {
+        @content;
+    }
+}
+
+@mixin hide-small {
+    @include small-size {
+        display: none;
+    }
+}
+
+@mixin hide-medium {
+    @include medium-size {
+        display: none;
+    }
+}
+
+@mixin hide-large {
+    @include large-size {
+        display: none;
     }
 }
