@@ -1,0 +1,53 @@
+{% assign current = page.url | downcase | split: '/' %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="The most popular HTML, CSS, and JS library in the world.">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="icon" href="assets/img/uava_logo_dark.png">
+    <link href="assets/css/uav.css" rel="stylesheet">
+  </head>
+  
+  <body>
+    <header class="navbar navbar-expand navbar-dark flex-column flex-md-row uav-navbar">
+      <a class="navbar-brand mr-0 mr-md-2" href="/">
+	<img src="assets/img/uava_light.png" width="40" height="40">
+      </a>
+
+      <div class="navbar-nav-scroll">
+	<ul class="navbar-nav uav-navbar-nav flex-row">}
+	  <li class="nav-item">
+            <a {% if page.home_active %}class="nav-link active"{% else %}class="nav-link"{% endif %} href="/">Home</a>
+	  </li>
+	  <li class="nav-item">
+            <a {% if current[1] == 'team.html' %}class="nav-link active"{% else %}class="nav-link"{% endif %} href="/team">The Fleet</a>
+	  </li>
+	  <li class="nav-item">
+            <a {% if current[1] == 'aircraft.html' %}class="nav-link active"{% else %}class="nav-link"{% endif %} href="/aircraft">Aircraft</a>
+	  </li>
+	  <li class="nav-item">
+            <a {% if current[1] == 'sponsors.html' %}class="nav-link active"{% else %}class="nav-link"{% endif %} href="/sponsors">Sponsors</a>
+	  </li>
+	  <li class="nav-item">
+            <a {% if current[1] == 'contact.html' %}class="nav-link active"{% else %}class="nav-link"{% endif %} href="/contact">Contact</a>
+	  </li>
+	</ul>
+      </div>
+
+      <div class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+	<a class="btn btn-outline-light d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="http://donate_link_goes_here" target="_blank">Donate</a>
+      </div>
+      
+    </header>
+
+    {{ content }}
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  </body>
+</html>
