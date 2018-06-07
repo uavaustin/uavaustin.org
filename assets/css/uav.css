@@ -285,4 +285,6 @@ h2 {
 #contact-image {
     margin-top: 2rem;
     box-shadow: 0 .50rem .75rem rgba(0, 0, 0, .45);
+    max-width: 90%;
+    width: 40rem
 }
