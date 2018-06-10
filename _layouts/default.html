@@ -13,38 +13,55 @@
   </head>
   
   <body>
-    <header class="navbar navbar-expand navbar-dark flex-column flex-md-row uav-navbar">
-      <a class="navbar-brand mr-0 mr-md-2" href="/">
-	<img src="assets/img/uava_light.png" width="40" height="40">
-      </a>
+    <nav class="navbar navbar-dark navbar-expand-lg uav-navbar py-3">
+      <div class="container">
+        <a class="navbar-brand pb-3 pl-1" href="/"><img src="assets/img/uava_logo_light.png" width="140" height="20"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#uav-navbar" aria-controls="uav-navbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="uav-navbar">
+          <ul class="navbar-nav mr-auto">
+	    <li class="nav-item">
+              <a {% if page.home_active %}class="nav-link active"{% else %}class="nav-link"{% endif %} href="/">Home</a>
+	    </li>
+	    <li class="nav-item">
+              <a {% if current[1] == 'team.html' %}class="nav-link active"{% else %}class="nav-link"{% endif %} href="/team">The Team</a>
+	    </li>
+	    <li class="nav-item">
+              <a {% if current[1] == 'aircraft.html' %}class="nav-link active"{% else %}class="nav-link"{% endif %} href="/aircraft">Aircraft</a>
+	    </li>
+	    <li class="nav-item">
+              <a {% if current[1] == 'sponsors.html' %}class="nav-link active"{% else %}class="nav-link"{% endif %} href="/sponsors">Sponsors</a>
+	    </li>
+	    <li class="nav-item">
+              <a {% if current[1] == 'contact.html' %}class="nav-link active"{% else %}class="nav-link"{% endif %} href="/contact">Contact</a>
+	    </li>
+	    <li class="nav-item">
+	      <a class="nav-link" href="http://donate_link_goes_here" target="_blank">Donate</a>
+	    </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-      <div class="navbar-nav-scroll">
-	<ul class="navbar-nav uav-navbar-nav flex-row">}
-	  <li class="nav-item">
-            <a {% if page.home_active %}class="nav-link active"{% else %}class="nav-link"{% endif %} href="/">Home</a>
-	  </li>
-	  <li class="nav-item">
-            <a {% if current[1] == 'team.html' %}class="nav-link active"{% else %}class="nav-link"{% endif %} href="/team">The Fleet</a>
-	  </li>
-	  <li class="nav-item">
-            <a {% if current[1] == 'aircraft.html' %}class="nav-link active"{% else %}class="nav-link"{% endif %} href="/aircraft">Aircraft</a>
-	  </li>
-	  <li class="nav-item">
-            <a {% if current[1] == 'sponsors.html' %}class="nav-link active"{% else %}class="nav-link"{% endif %} href="/sponsors">Sponsors</a>
-	  </li>
-	  <li class="nav-item">
-            <a {% if current[1] == 'contact.html' %}class="nav-link active"{% else %}class="nav-link"{% endif %} href="/contact">Contact</a>
-	  </li>
+    <div class="content">
+      {{ content }}
+    </div>
+    
+    <footer class="footer">
+      <div class="container-fluid p-3 p-md-4">
+	<ul class="bd-footer-links">
+	  <li><a href="https://github.com/twbs/bootstrap">GitHub</a></li>
+	  <li><a href="https://twitter.com/getbootstrap">Twitter</a></li>
+	  <li><a href="/docs/4.1/examples/">Examples</a></li>
+	  <li><a href="/docs/4.1/about/overview/">About</a></li>
 	</ul>
+	<p>Designed and built with all the love in the world by <a href="https://twitter.com/mdo" target="_blank" rel="noopener">@mdo</a> and <a href="https://twitter.com/fat" target="_blank" rel="noopener">@fat</a>. Maintained by the <a href="https://github.com/orgs/twbs/people">core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</p>
+	<p>Currently v4.1.1. Code licensed <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank" rel="license noopener">MIT</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</p>
       </div>
+    </footer>
 
-      <div class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-	<a class="btn btn-outline-light d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="http://donate_link_goes_here" target="_blank">Donate</a>
-      </div>
-      
-    </header>
 
-    {{ content }}
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
