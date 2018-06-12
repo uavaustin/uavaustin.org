@@ -6,22 +6,23 @@
     --jumbotron-padding-y: 2rem;
 }
 
-html, body, #big-container {
+html, body {
     height: 100%;
-}
-#big-container {
-    display: flex;
-    flex-direction: column;
+    margin: 0;
     background-color: #eceff4;
     color: #2e3440
 }
-.content {
-    flex: 1 0 auto;
+.wrapper {
+    min-height: 100%;
+    margin-bottom: -50px;
+    
 }
+.footer,
+.push {
+    height: 50px;
+}
+
 .footer {
-    flex-shrink: 0;
-    background-color: #2e3440;
-    color: #d8dee9
 }
 /*
  * === navbar ===
