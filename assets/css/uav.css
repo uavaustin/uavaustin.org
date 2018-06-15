@@ -8,7 +8,8 @@
 
 html, body, #big-container {
     height: 100%;
-    background-color: #eceff4
+    background-color: #eceff4;
+    color: #2e3440
 }
 #big-container {
     display: flex;
@@ -300,12 +301,13 @@ h2 {
 
 .footer a {
     font-weight: 500;
-    color: #d8dee9
+    color: #d8dee9;
+    margin: 0
 }
 
 .footer a:focus,
 .footer a:hover {
-    color: #007bff
+    color: #d8dee9
 }
 
 .footer p {
