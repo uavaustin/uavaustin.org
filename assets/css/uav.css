@@ -8,6 +8,7 @@
 
 html, body, #big-container {
     height: 100%;
+    background-color: #eceff4
 }
 #big-container {
     display: flex;
@@ -188,6 +189,12 @@ h2 {
     text-align: center;
 }
 
+.card {
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+}
+
 
 .card-name {
     font-weight: bold;
@@ -200,7 +207,8 @@ h2 {
 
 .album {
     margin-bottom: 2rem;
-    background-color: inherit
+    background-color: inherit;
+    text-align: center;
 }
 
 
@@ -283,6 +291,11 @@ h2 {
     width: 40rem
 }
 
+#team-image {
+    margin-top: 2rem;
+    max-width: 90%;
+    width: 40rem
+}
 
 
 .footer a {
