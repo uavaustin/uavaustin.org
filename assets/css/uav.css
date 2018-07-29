@@ -107,7 +107,7 @@ html, body, #big-container {
 @media (min-width:576px) {
     .uav-masthead {
         padding-top: 5rem;
-        padding-bottom: 5rem
+        padding-bottom: 3rem
     }
 }
 
