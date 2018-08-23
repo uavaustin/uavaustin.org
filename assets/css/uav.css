@@ -122,8 +122,12 @@ html, body, #big-container {
     margin: 2.5rem 0
 }
 
-.carousel {
+.mc-height {
     height: 40rem;
+}
+
+.ac-height {
+    height: 100%;
 }
 .carousel-caption {
     bottom: 3rem;
