@@ -334,9 +334,3 @@ h2 {
 .bd-footer-links li + li {
   margin-left: 1rem;
 }
-
-.card-img-top {
-  width: 100%;
-  height: 15vw;
-  object-fit: cover;
-}
