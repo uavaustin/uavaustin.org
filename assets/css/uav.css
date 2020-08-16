@@ -340,3 +340,7 @@ h2 {
   height: 15vw;
   object-fit: cover;
 }
+
+.vertical-padding {
+  vertical-align: bottom;
+}
